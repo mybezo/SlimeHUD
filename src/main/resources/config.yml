@@ -1,50 +1,50 @@
 options:
-  # 自动更新 （你应该开启）
+  # Automatically update the plugin (you should keep this on)
   auto-update: true
 
-  # 是否启用 PlaceholderAPI 的支持（可获取玩家的HUD启用状态）
+  # Enable PlaceholderAPI support (lets you get a player's HUD toggle state)
   placeholder-api-support: true
 
-  # 是否启用 Use SlimefunTranslation 来显示翻译后的物品名称
+  # Use SlimefunTranslation to display translated item names
   slimefun-translation-support: true
 
 waila:
 
-  # 设置为 true 时，禁用一切功能。
-  # 最高优先级，无视 'disabled-in' 设置与玩家偏好。
+  # When true, disables everything.
+  # Highest priority, overrides the 'disabled-in' setting and player preferences.
   disabled: false
 
-  # 设置需要禁用 WAILA 的世界。
+  # Worlds in which the WAILA is disabled.
   disabled-in: []
 
-  # 显示位置，可以为 'bossbar' 或 'hotbar'。
+  # Where to display the HUD. Can be 'bossbar' or 'hotbar'.
   location: bossbar
 
-  # 是否使用与方块的原始名称颜色。关闭后，使用白色。
+  # Whether to use the block's original name colors. If false, white is used.
   use-original-colors: true
 
-  # Boss血条颜色，必须为小驼峰 'snake_case'.
-  # 'inherit' 为匹配最相近的颜色 'match the color of the bossbar to that of the text'.
-  # 'default' 为白色
+  # Color of the bossbar, must be in 'snake_case'.
+  # 'inherit' will match the color of the bossbar to that of the text.
+  # 'default' is white.
   bossbar-color: inherit
 
-  # 货运管理器/连接器是否显示货运网络大小
+  # Whether cargo managers/connectors show the size of the cargo network
   show-cargo-size: true
 
-  # 货运输入/输出节点是否显示信道
+  # Whether cargo input/output nodes show their channel
   show-cargo-channel: true
 
-  # 能源管理器/连接器是否显示能源网络大小
+  # Whether energy regulators/connectors show the size of the energy network
   show-energy-size: true
 
-  # 电容是否显示已存储电量
+  # Whether capacitors show the amount of energy stored
   show-energy-stored: true
 
-  # 是否显示机器进度（支持大部分机器）
+  # Whether to show machine progress (supports most machines)
   show-machine-progress: true
 
-  # 是否显示发电机效率（支持大部分发电机）
+  # Whether to show generator output (supports most generators)
   show-generator-generation: true
 
-  # WAILA 更新间隔，单位为MC游戏刻
+  # How often the WAILA updates, in Minecraft ticks
   tick-rate: 10

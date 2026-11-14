@@ -9,7 +9,7 @@ public class PlaceholderManager {
             if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null) {
                 new PlaceholderHook().register();
             } else {
-                SlimeHUD.getInstance().getLogger().info("PlaceholderAPI 未安装，相关功能将不会启用。");
+                SlimeHUD.getInstance().getLogger().info("PlaceholderAPI is not installed, related features will be disabled.");
             }
         }
     }
