@@ -20,5 +20,12 @@ jobs:
           distribution: 'temurin'
           java-version: 25
           cache: 'maven'
+      - name: Install Slimefun
+        run: .github/scripts/install-slimefun.sh
       - name: Build with Maven
-        run: mvn package --file pom.xml
+        run: mvn -B package -Dmaven.compiler.showDeprecation=true -Dmaven.compiler.showWarnings=true --file pom.xml
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: SlimeHUD
+          path: target/SlimeHUD*.jar

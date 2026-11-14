@@ -13,9 +13,9 @@ import org.bukkit.scheduler.BukkitRunnable;
 
 import io.github.schntgaispock.slimehud.SlimeHUD;
 import io.github.schntgaispock.slimehud.util.Util;
+import com.xzavier0722.mc.plugin.slimefun4.storage.util.StorageCacheUtils;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import lombok.Getter;
-import me.mrCookieSlime.Slimefun.api.BlockStorage;
 import net.md_5.bungee.api.ChatMessageType;
 import net.md_5.bungee.api.chat.TextComponent;
 
@@ -105,7 +105,7 @@ public class PlayerWAILA extends BukkitRunnable {
             return;
         }
 
-        SlimefunItem item = BlockStorage.check(targetBlock);
+        SlimefunItem item = StorageCacheUtils.getSlimefunItem(targetBlock.getLocation());
         if (item == null) {
             clearFacing();
             return;

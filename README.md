@@ -36,10 +36,10 @@ Just look at a block to see its name, with no need to open its menu or break it.
 
 | Dependency | Required |
 | --- | --- |
-| Spigot / Paper (or a fork), 1.19+ | ✅ |
-| Java 17+ | ✅ |
-| Slimefun | ✅ |
-| GuizhanLibPlugin | ✅ |
+| Spigot / Paper (or a fork), up to Minecraft **26.3** | ✅ |
+| Java 21+ (Java 25 for Minecraft 26.x) | ✅ |
+| [Slimefun](https://github.com/SlimefunGuguProject/Slimefun4/releases) **2026.1** or newer | ✅ |
+| [GuizhanLibPlugin](https://github.com/ybw0014/GuizhanLibPlugin) 2.5.0+ | ✅ |
 | PlaceholderAPI | Optional |
 | SlimefunTranslation | Optional |
 
@@ -101,9 +101,14 @@ Main options in `config.yml`:
 
 ## Building from source
 
+Requires JDK 21+ (JDK 25 recommended) and Maven.
+
 ```bash
 git clone https://github.com/mybezo/SlimeHUD.git
 cd SlimeHUD
+# Slimefun releases aren't available on a Maven repository,
+# so install the official release jar into your local repository first
+.github/scripts/install-slimefun.sh
 mvn package
 ```
 

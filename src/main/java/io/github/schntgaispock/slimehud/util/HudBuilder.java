@@ -21,7 +21,7 @@ public class HudBuilder {
      * @return The formatted text
      */
     @Nonnull
-    public static String formatEnergyStored(int energy) {
+    public static String formatEnergyStored(long energy) {
         return HudBuilder.getAbbreviatedNumber(energy) + " J Stored";
     }
 
@@ -32,7 +32,7 @@ public class HudBuilder {
      * @return The formatted text
      */
     @Nonnull
-    public static String formatEnergyStored(int energy, int totalEnergy) {
+    public static String formatEnergyStored(long energy, long totalEnergy) {
         return HudBuilder.getAbbreviatedNumber(energy) + "/" + HudBuilder.getAbbreviatedNumber(totalEnergy) + " J";
     }
 
@@ -43,7 +43,7 @@ public class HudBuilder {
      * @return The formatted text
      */
     @Nonnull
-    public static String formatEnergyGenerated(int energy) {
+    public static String formatEnergyGenerated(long energy) {
         return "&e⚡&7 " + HudBuilder.getAbbreviatedNumber(energy) + " J/t";
     }
 
