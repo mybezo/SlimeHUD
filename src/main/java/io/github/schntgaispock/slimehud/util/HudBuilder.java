@@ -47,6 +47,24 @@ public class HudBuilder {
         return "&e⚡&7 " + HudBuilder.getAbbreviatedNumber(energy) + " J/t";
     }
 
+    // int overloads are kept for binary compatibility with addons compiled
+    // against older SlimeHUD versions (e.g. InfinityExpansion2).
+
+    @Nonnull
+    public static String formatEnergyStored(int energy) {
+        return formatEnergyStored((long) energy);
+    }
+
+    @Nonnull
+    public static String formatEnergyStored(int energy, int totalEnergy) {
+        return formatEnergyStored((long) energy, (long) totalEnergy);
+    }
+
+    @Nonnull
+    public static String formatEnergyGenerated(int energy) {
+        return formatEnergyGenerated((long) energy);
+    }
+
     /**
      * Returns an 11-char progress bar made of "|"s
      * 
